@@ -13,6 +13,7 @@ for i = 1:size(X, 2)
     [correlation, pval] = corr(X(:, i), Y);
     
     % If the p-value of the correlation is less than xx, add the corresponding column of Y to the list of selected features
+    % If the p-value of the correlation is less than xx, add the corresponding column of Y to the list of selected features,XX in the article is 1
     if any(pval < xx)
         selected_x_features{end+1} = X(:, i);
     end
